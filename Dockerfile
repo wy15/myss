@@ -13,7 +13,7 @@ RUN set -ex \
 # Dockerfile for shadowsocks-libev
 #
 
-FROM alpine:3.11
+FROM alpine
 LABEL maintainer="kev <noreply@datageek.info>, Sah <contact@leesah.name>"
 LABEL maintainer="mq83"
 
