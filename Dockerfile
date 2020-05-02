@@ -16,6 +16,7 @@ RUN set -ex \
 FROM alpine
 LABEL maintainer="kev <noreply@datageek.info>, Sah <contact@leesah.name>"
 LABEL maintainer="mq83"
+ENV TZ UTC
 
 COPY --from=build /build/v2ray-plugin/v2ray-plugin /usr/bin/v2ray-plugin
 
