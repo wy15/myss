@@ -1,14 +1,13 @@
 FROM golang:alpine as build
 
-RUN apk add --no-cache ca-certificates git upx
+RUN apk add --no-cache ca-certificates git
 
 WORKDIR /build
 
 RUN set -ex \
     && git clone https://github.com/shadowsocks/v2ray-plugin \
     && cd v2ray-plugin \
-    && CGO_ENABLED=0 go build -a -v -ldflags "-s -w" \
-    && upx --best v2ray-plugin
+    && CGO_ENABLED=0 go build -a -v -ldflags "-s -w"
 #
 # Dockerfile for shadowsocks-libev
 #
